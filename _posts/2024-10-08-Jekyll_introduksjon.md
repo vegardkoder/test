@@ -63,6 +63,10 @@ paragraf b
 - Opplevde problemer når jeg følget en youtube video som gjennomgikk installasjons prosessen av Jekyll. Tilslutt fant jeg i offesiell dokumentasjon av hvis du prøver å installere det på Windows er det anbefalt å bruke en extension i vscode som heter "Dev container". Antar at dette er en slags docker container.
 
 
+### big discovery
+
+move files from source code into project, such as whole _sass directory, if you want to modify css
+
 # Ressurser brukt
 - https://www.youtube.com/watch?v=F8iOU1ci19Q&pp=ygUGamVreWxs
 - https://www.markdownguide.org/cheat-sheet/
