@@ -1,7 +1,7 @@
 ---
 title: Introduksjon til Jekyll
 tags: [webutvikling, nybegynner]
-date: 2024-10-04 13:50:00 +800
+date: 2024-10-04 13:50:00 +0200
 categories: [webutvikling]
 description: Rask oppsumering av min første erfaring med Jekyll
 ---
@@ -30,42 +30,51 @@ paragraf b
 
 ```
 
-## Forsøk på endring av css I chirpy tema
-- hadde vært fint om det var en css fil i chirpy som lot meg redigere css, men så langt har jeg ikke funnet noe slikt. 
-- Kanskje jeg må endre kildekoden til chirpy frammeverket direkte for å kunne endre på css.
-- "Customizing the Stylesheet" delen i offesiell dokumentasjon matcher ikke filsystemet jeg har i prosjektet mitt. Med mindre de snakker om kildekoden til frammeverket direkte? 
-- kildekoden til jekyll befinner seg i
+## Endring av stylesheet
+For å redigere innebygd stylesheet må de følgene filer kopieres fra kildekoden recursively til prosjekt mappe. Kildekoden til Chirpy er funnet i /usr/local/rvm/gems/default/gems/jekyll-theme-chirpy-7.1.1/ 
+
+- fra: /kildekode/_sass til: prosjektmappe/_sass. _sass/colors/typography-light.scss inneholder variabler som foreksempler kontrollerer farge til sidebaren.
+
+Kan bruke "inspect element" i nettleser for å undersøke hva forskjellige variabler heter.
+Kan bruke følgende kommand til å søke etter variabel navn i filer
+
 ```bash
-/usr/local/rvm/gems/default/gems/jekyll-theme-chirpy-7.1.1/
+grep -Rnw . -e "variabel-navn"
 ```
 
-- problemet med å endre kildekoden er at når nettsiden skal deployes på foreksempel Vercel.com, vil ikke den redigerte versjonen av kildekoden bli brukt.
-- ide: muligens mulig å lage en "fork" versjon av jekyll-chirpy frammeverket, og spesifisere at den versjonen skal brukes når deployment oppstår?
+### ulike notater
+- du kan lage en ny side ved å opprette en ny fil i mappen _tabs. Spesifiser en layout i front matter greien. f113
+
+### Endring av språk
+- språk kan endres i _config.yml konfigurasjons fil, i variabel "lang". språk koden må matche en av filene funnet i /usr/local/rvm/gems/default/gems/jekyll-theme-chirpy-7.1.1/_data/locales
+- hvis ønsket språk ikke er tilgjengelig kan du lage din egen fil ved å kopiere en, bytte på navn og oversette innhold. språk filen må også kopieres til ut av kildekoden og til nettside systemet under mappen _data/locales/
+
+---
 
 ### endring av farge på sidebar
 - bakgrunns farge på sidebar kontroleres av en variabel med navn --sidebar-bg. Den er funnet i /usr/local/rvm/gems/default/gems/jekyll-theme-chirpy-7.1.1/_sass/colors/typography-light.scss
 - typography-dark.scss (hvis du vil endre dark mode)
 - Bruk "inspect element" i nettleser for å undersøke hva forskjellige variabler heter.
 
-![bilde](/assets/img/skjermbilde.png)
+![bilde](/assets/img/skjermbilde.png){: width="500" height="500"}
+
+vennligst gå til følgende filepath `/path/to/a/file.extend`{: .filepath}
+
+
+---
+
 
 
 ## legg til statiske bilder
 - legg til mappe /assets/img
-- oppgi følgende i innlegg markdown fil når du vil inkludere et statisk bilde.
+- markdown syntax for å inkludere bilder:
 
 ```markdown
-![bilde](/assets/img/filnavn.png)
+![bilde](/assets/img/skjermbilde.png){: width="400" height="400"}
 ```
-
 
 ## Problemer med installasjon
 - Opplevde problemer når jeg følget en youtube video som gjennomgikk installasjons prosessen av Jekyll. Tilslutt fant jeg i offesiell dokumentasjon av hvis du prøver å installere det på Windows er det anbefalt å bruke en extension i vscode som heter "Dev container". Antar at dette er en slags docker container.
-
-
-### big discovery
-
-move files from source code into project, such as whole _sass directory, if you want to modify css
 
 # Ressurser brukt
 - https://www.youtube.com/watch?v=F8iOU1ci19Q&pp=ygUGamVreWxs

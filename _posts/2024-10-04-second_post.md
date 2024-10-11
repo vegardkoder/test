@@ -1,7 +1,7 @@
 ---
 title: Second post ever posted
 tags: [servers, dell, hp, supermicro]
-date: 2024-10-04 13:50:00 +800
+date: 2024-10-04 13:50:00 +0200
 categories: [homelab, hardware]
 description: Short summary of this post.
 ---

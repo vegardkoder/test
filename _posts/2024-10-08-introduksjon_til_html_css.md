@@ -1,7 +1,7 @@
 ---
 title: Demonstrasjon av HTML og CSS evner
 tags: [webutvikling, nybegynner]
-date: 2024-10-04 13:50:00 +800
+date: 2024-10-04 13:50:00 +0200
 categories: [webutvikling]
 description: Kort demonstrasjon av mine evner i HTML og CSS
 ---
