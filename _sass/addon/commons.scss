@@ -679,6 +679,10 @@ $sidebar-display: 'sidebar-display';
 $btn-border-width: 3px;
 $btn-mb: 0.5rem;
 
+.flex-main {
+  display: flex;
+}
+
 #sidebar {
   @include pl-pr(0);
 

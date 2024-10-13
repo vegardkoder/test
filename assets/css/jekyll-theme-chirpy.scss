@@ -8,3 +8,30 @@
 ';
 
 /* append your custom style below */
+
+#new-sidebar {
+  position: sticky;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--sidebar-bg);
+  width: $sidebar-width;
+  padding: 2.75rem;
+  border-right: 1px solid var(--sidebar-border-color);
+}
+
+#sidebar-profile {
+  height: 30%;
+}
+#sidebar-tabs {
+  height: 65%;
+}
+#sidebar-bottom {
+  height: 5%;
+}
+
+
+.nav {
+  display: unset;
+}
