@@ -2,7 +2,8 @@
 ---
 
 @import 'main
-{%- if jekyll.environment == 'production' -%}
+{%- if jekyll.environment == ' production
+  ' -%}
   .bundle
 {%- endif -%}
 ';
@@ -10,21 +11,67 @@
 /* append your custom style below */
 
 #new-sidebar {
+  top: 0;
+  bottom: 0;
   position: sticky;
   display: flex;
   gap: 20px;
+  width: 260px;
   flex-direction: column;
-  height: 100vh;
   background: var(--sidebar-bg);
   width: $sidebar-width;
   padding: 2.75rem;
+  max-height: 100vh;
+  overflow-y: scroll;
   border-right: 1px solid var(--sidebar-border-color);
+}
+
+#new-sidebar .site-title {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.25px;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+#new-sidebar a {
+  color: var(--site-title-color);
+}
+
+#new-sidebar ul li.nav-item.active .nav-link {
+  color: var(--sidebar-active-color);
+  background-color: var(--sidebar-hover-bg);
+}
+
+#new-sidebar ul {
+  margin-bottom: 2rem;
+}
+#new-sidebar ul li.nav-item {
+  opacity: 0.9;
+}
+
+#new-sidebar #avatar {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  overflow: hidden;
+  box-shadow: var(--avatar-border-color) 0 0 0 2px;
+  transform: translateZ(0);
 }
 
 #sidebar-bottom {
   margin-top: auto;
+  display: flex;
+  gap: 13px;
 }
 
+#sidebar-bottom a {
+  border-radius: 50%;
+  color: var(--sidebar-btn-color);
+  background-color: var(--sidebar-btn-bg);
+}
 
 .nav {
   display: unset;
@@ -32,6 +79,7 @@
 
 .flex-main {
   display: flex;
+  align-items: stretch;
   gap: 30px;
 }
 
@@ -41,7 +89,7 @@
 }
 
 .new-footer {
-  display:flex;
+  display: flex;
   margin-top: auto;
 }
 

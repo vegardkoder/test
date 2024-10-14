@@ -19,3 +19,35 @@ forsøk på å endre layout til jekyll-chirpy frammeverk, så flexbox blir brukt
 
 ## gjøre liste
 - søke funksjon fungerer ikke med ny layout
+
+## scrolle test
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf
+
+hakjsdhfjkasdjfjhskadf

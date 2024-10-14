@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-
 <!doctype html>
 
 {% include origin-type.html %}
@@ -17,49 +16,47 @@ layout: compress
   {% include head.html %}
 
   <body>
-
     <div class="flex-main">
-        {% include new-sidebar.html lang=lang %}
+      {% include new-sidebar.html lang=lang %}
       <div class="flex-mainarea">
         {% include topbar.html lang=lang %}
 
-          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
-            {% if layout.refactor or layout.layout == 'default' %}
-              {% include refactor-content.html content=content lang=lang %}
-            {% else %}
-              {{ content }}
-            {% endif %}
-          </main>
+        <main aria-label="Main Content">
+          {% if layout.refactor or layout.layout == 'default' %}
+            {% include refactor-content.html content=content lang=lang %}
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </main>
 
-          <!-- panel -->
+        <!-- panel -->
 
-          <!-- tail -->
-            {% for _include in layout.tail_includes %}
-              {% assign _include_path = _include | append: '.html' %}
-              {% include {{ _include_path }} lang=lang %}
-            {% endfor %}
+        <!-- tail -->
+        {% for _include in layout.tail_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+        {% endfor %}
 
-            {% include_cached new-footer.html lang=lang %}
+        {% include_cached new-footer.html lang=lang %}
 
         {% include_cached search-results.html lang=lang %}
-      <aside aria-label="Scroll to Top">
-        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
-          <i class="fas fa-angle-up"></i>
-        </button>
-      </aside>
+        <aside aria-label="Scroll to Top">
+          <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+            <i class="fas fa-angle-up"></i>
+          </button>
+        </aside>
       </div>
 
-
       <div class="recent-changes">
-            <div class="access">
-              {% include_cached update-list.html lang=lang %}
-              {% include_cached trending-tags.html lang=lang %}
-            </div>
+        <div class="access">
+          {% include_cached update-list.html lang=lang %}
+          {% include_cached trending-tags.html lang=lang %}
+        </div>
 
-            {% for _include in layout.panel_includes %}
-              {% assign _include_path = _include | append: '.html' %}
-              {% include {{ _include_path }} lang=lang %}
-            {% endfor %}
+        {% for _include in layout.panel_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+        {% endfor %}
       </div>
     </div>
   </body>
