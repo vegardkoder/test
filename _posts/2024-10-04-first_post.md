@@ -6,6 +6,8 @@ categories: [homelab, hardware]
 description: Short summary of this post.
 ---
 
+small change
+
 # Welcome
 
 Hello and welcome to my homelab soc site!
