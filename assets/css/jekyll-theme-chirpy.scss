@@ -21,17 +21,37 @@
   border-right: 1px solid var(--sidebar-border-color);
 }
 
-#sidebar-profile {
-  height: 30%;
-}
-#sidebar-tabs {
-  height: 65%;
-}
 #sidebar-bottom {
-  height: 5%;
+  margin-top: auto;
 }
 
 
 .nav {
   display: unset;
+}
+
+.flex-main {
+  display: flex;
+  gap: 30px;
+}
+
+.flex-mainarea {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-footer {
+  display:flex;
+  margin-top: auto;
+}
+
+.new-footer p {
+  width: 50%;
+}
+
+.new-footer p.copyright {
+  text-align: left;
+}
+.new-footer p.theme-info {
+  text-align: right;
 }
