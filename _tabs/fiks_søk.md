@@ -19,3 +19,4 @@ layout: fix_search
 
 - søkemotor brukt: https://github.com/christian-fei/Simple-Jekyll-Search
 - finn ut hvorfor det bryter sammen når endringer på html er endret.
+- div med klasse "row flex-grow-1" får "d-none", når søkefeltet som gjør innholdet skjult. "d-none" blir fjernet fra "search-result-wrapper"
