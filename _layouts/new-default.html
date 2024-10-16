@@ -27,6 +27,7 @@ layout: compress
           {% else %}
             {{ content }}
           {% endif %}
+          {% include_cached search-results.html lang=lang %}
         </main>
 
         <!-- panel -->
@@ -39,7 +40,6 @@ layout: compress
 
         {% include_cached new-footer.html lang=lang %}
 
-        {% include_cached search-results.html lang=lang %}
         <aside aria-label="Scroll to Top">
           <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
             <i class="fas fa-angle-up"></i>

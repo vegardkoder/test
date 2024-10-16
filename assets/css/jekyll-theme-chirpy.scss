@@ -119,6 +119,9 @@
   flex-direction: column;
 }
 
+#main-wrapper.flex-mainarea {
+  margin-left: 0;
+}
 .new-footer {
   display: flex;
   margin-top: auto;
