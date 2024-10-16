@@ -18,4 +18,4 @@ layout: fix_search
 ```
 
 - søkemotor brukt: https://github.com/christian-fei/Simple-Jekyll-Search
-- finn ut hvorfor det bryter sammen når endringer på html er gjort.
+- finn ut hvorfor det bryter sammen når endringer på html er endret.
