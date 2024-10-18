@@ -18,7 +18,7 @@
   gap: 20px;
   flex-direction: column;
   background: var(--sidebar-bg);
-  min-width: $sidebar-width !important;
+  width: $sidebar-width !important;
   max-height: 100vh;
   overflow-y: scroll;
   padding-left: 40px;
@@ -26,10 +26,6 @@
   padding-top: 3rem;
   padding-bottom: 1.5rem;
   border-right: 1px solid var(--sidebar-border-color);
-}
-
-#sidebar-tabs a {
-  padding-left: 0px;
 }
 
 #new-sidebar .site-title {
@@ -46,16 +42,12 @@
   color: var(--site-title-color);
 }
 
-#new-sidebar ul li.nav-item.active .nav-link {
-  color: var(--sidebar-active-color);
-  background-color: var(--sidebar-hover-bg);
+#new-sidebar ul li.nav-item a.nav-link {
+  border-radius: 0.75rem;
 }
 
-#new-sidebar ul {
-  margin-bottom: 2rem;
-}
-#new-sidebar ul li.nav-item {
-  opacity: 0.9;
+#new-sidebar #sidebar-profile {
+  margin-bottom: 1rem;
 }
 
 #new-sidebar #avatar {
@@ -67,41 +59,44 @@
   transform: translateZ(0);
 }
 
+#new-sidebar ul li.nav-item a.nav-link i {
+  margin-right: 1.5rem;
+}
+
+#new-sidebar ul li.nav-item.active .nav-link {
+  color: var(--sidebar-active-color);
+  background-color: var(--sidebar-hover-bg);
+}
+
+#new-sidebar ul li.nav-item:hover {
+  color: var(--sidebar-active-color);
+  background-color: var(--sidebar-hover-bg);
+  border-radius: 0.75rem;
+}
+
+#new-sidebar ul li.nav-item:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+li.nav-item {
+  font-weight: 600;
+}
+
+#sidebar-tabs > ul.nav {
+  display: block;
+}
+
 #sidebar-bottom {
   margin-top: auto;
   display: flex;
   justify-content: space-between;
 }
-
-#sidebar-bottom a {
-  border-radius: 50%;
-  width: 1.75rem;
-  height: 1.75rem;
-  text-align: center;
-  color: var(--sidebar-btn-color);
-  background-color: var(--sidebar-btn-bg);
-}
-
-#sidebar-bottom button {
-  border-radius: 50%;
-  text-align: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  color: var(--sidebar-btn-color);
-  background-color: var(--sidebar-btn-bg);
-}
-.nav {
-  display: unset;
-}
+/* sidebar ends here */
 
 .flex-main {
   display: flex;
   gap: 30px;
   align-items: stretch;
-}
-
-.recent-changes {
-  width: 20%;
 }
 
 #topbar {
@@ -116,6 +111,7 @@
 .flex-mainarea {
   padding-top: 1rem;
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 

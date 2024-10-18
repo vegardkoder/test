@@ -21,6 +21,8 @@ Lag ny "default layout" for chirpy, som tilslutt skal erstatte den nåværende d
 - venstre baren og høyere baren burde ha størrelser slik at artikkel innhold blir midtstilt.
 - burde topbar alltid være synlig?
 
+- https://grid.layoutit.com/
+
 ## bugs
 bugs introdusert med ny layout
 
