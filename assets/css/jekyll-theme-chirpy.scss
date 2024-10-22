@@ -10,6 +10,14 @@
 
 /* append your custom style below */
 
+.article-wrapper {
+  display: flex;
+}
+
+.main {
+  margin-right: 30px;
+}
+
 #new-sidebar {
   top: 0;
   bottom: 0;
@@ -18,7 +26,7 @@
   gap: 20px;
   flex-direction: column;
   background: var(--sidebar-bg);
-  width: $sidebar-width !important;
+  min-width: $sidebar-width;
   max-height: 100vh;
   overflow-y: scroll;
   padding-left: 40px;

@@ -5,6 +5,10 @@ title: ny layout
 layout: new-default
 ---
 
+> Det ble for mye surr, prosjektet er på pause. mulig at layout er bra nokk.
+{: .prompt-info }
+
+
 # Mål
 Lag ny "default layout" for chirpy, som tilslutt skal erstatte den nåværende default layout. format: status, melding.
 - (ja) flexbox blir tatt ibruk

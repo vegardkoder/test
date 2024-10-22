@@ -18,17 +18,29 @@ layout: compress
   <body>
     <div class="flex-main">
       {% include new-sidebar.html lang=lang %}
-      <div class="flex-mainarea">
+      <div class="main">
         {% include new-topbar.html lang=lang %}
+        <div class="article-wrapper">
+          <article aria-label="Main Content">
+            {% if layout.refactor or layout.layout == 'default' %}
+              {% include refactor-content.html content=content lang=lang %}
+            {% else %}
+              {{ content }}
+            {% endif %}
+            {% include_cached search-results.html lang=lang %}
+          </article>
+          <div class="recent-changes">
+            <div class="access">
+              {% include_cached update-list.html lang=lang %}
+              {% include_cached trending-tags.html lang=lang %}
+            </div>
 
-        <main aria-label="Main Content">
-          {% if layout.refactor or layout.layout == 'default' %}
-            {% include refactor-content.html content=content lang=lang %}
-          {% else %}
-            {{ content }}
-          {% endif %}
-          {% include_cached search-results.html lang=lang %}
-        </main>
+            {% for _include in layout.panel_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+          </div>
+        </div>
 
         <!-- panel -->
 
@@ -38,25 +50,13 @@ layout: compress
           {% include {{ _include_path }} lang=lang %}
         {% endfor %}
 
-        {% include_cached new-footer.html lang=lang %}
-
         <aside aria-label="Scroll to Top">
           <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
             <i class="fas fa-angle-up"></i>
           </button>
         </aside>
-      </div>
 
-      <div class="recent-changes">
-        <div class="access">
-          {% include_cached update-list.html lang=lang %}
-          {% include_cached trending-tags.html lang=lang %}
-        </div>
-
-        {% for _include in layout.panel_includes %}
-          {% assign _include_path = _include | append: '.html' %}
-          {% include {{ _include_path }} lang=lang %}
-        {% endfor %}
+        {% include_cached new-footer.html lang=lang %}
       </div>
     </div>
     <!-- JavaScripts -->

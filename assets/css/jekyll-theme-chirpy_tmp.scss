@@ -1,0 +1,31 @@
+---
+---
+
+@import 'main
+{%- if jekyll.environment == ' production
+  ' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+.main {
+  display: flex;
+}
+
+.main > #main-wrapper {
+  margin-left: 0;
+}
+
+.main > #sidebar {
+  position: sticky;
+  min-width: 260px;
+  height: 100vh;
+}
+
+.new-footer {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+}
